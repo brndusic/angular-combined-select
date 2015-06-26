@@ -1,0 +1,30 @@
+{
+  "name": "angular-combined-select",
+  "version": "0.1.0",
+  "homepage": "https://github.com/brndusic/angular-combined-select",
+  "authors": [
+    "Mladen Brndusic <brndusic@gmail.com>"
+  ],
+  "description": "Angular combined select directive",
+  "main": "./lib/combined-select.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "angular",
+    "combined",
+    "select",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": ">1.3.1"
+  }
+}

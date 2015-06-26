@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Angular Combined Select</title>
+
+<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+
+<script src="../lib/combined-select.js"></script>
+
+<script>
+    angular.module('app', [ 'combined-select' ]);
+    angular.module('app').controller("Ctrl", [ "$scope", function(s) {
+        s.$watch("test_val_1", function() {
+            console.log(arguments);
+        });
+
+        s.$watch("test_val_2", function() {
+            console.log(arguments);
+        });
+    } ]);
+</script>
+
+<style>
+div.selected {
+	color: red;
+	background-color: blue;
+}
+
+div.drop_down_item {
+	cursor: pointer;
+}
+
+div.drop_down_item:hover {
+	background-color: blue;
+}
+
+.drop_down {
+	height: 150px;
+	overflow: scroll;
+	width: 100px;
+}
+</style>
+
+</head>
+<body ng-app="app" ng-controller="Ctrl">
+
+	<div class="container">
+
+		<div class="row">
+			<selector s-min="2" s-max="10" s-step="2" s-buttons="4" ng-model="test_val_1" name="test"></selector>
+		</div>
+		<div class="row">
+			<selector s-min="2" s-max="30" s-step="2" s-buttons="8" ng-model="test_val_2" s-name="test1"></selector>
+		</div>
+
+	</div>
+</body>
+</html>

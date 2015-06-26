@@ -1,0 +1,10 @@
+<form name="{{name}}">
+	<div ng-show="max_btn_value > value">
+		<label ng-repeat="v in btn_values" class="btn btn-primary active"> <input name="s_{{name}}" ng-model="$parent.value" ng-value="{{v}}" type="radio">{{
+			$last ? v + '+' : v }}
+		</label>
+	</div>
+	<div ng-hide="max_btn_value > value">
+		<label><select ng-model="value" ng-options="v as v for v in values"></select> </label>
+	</div>
+</form>
